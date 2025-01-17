@@ -9,6 +9,13 @@ destination_dir = '/home/ubuntu/git'
 git_repo_dir = '/home/ubuntu/kesor-git'  # Путь к локальному git репозиторию
 git_repo_url = 'https://McKeSoR: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a@github.com/McKeSoR/LauncherReleases.git'
 
+
+# Получаем токен из переменной окружения (или из жестко заданной строки)
+github_token = os.getenv("GITHUB_TOKEN")  # Получаем токен из переменной окружения
+
+# Формируем URL репозитория с токеном
+git_repo_url = f'https://{github_token}@github.com/McKeSoR/LauncherReleases.git'
+
 class MyHandler(FileSystemEventHandler):
     def on_modified(self, event):
         if not event.is_directory:
