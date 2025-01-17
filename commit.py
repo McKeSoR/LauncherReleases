@@ -14,7 +14,7 @@ git_repo_url = 'https://McKeSoR:github_pat_11AWBQG4I0WsOmWMIAUKrF_wl9p6hA2hHkGmL
 github_token = os.getenv("GITHUB_TOKEN")  # Получаем токен из переменной окружения
 
 # Формируем URL репозитория с токеном
-git_repo_url = f'https://{github_token}@github.com/McKeSoR/LauncherReleases.git'
+git_repo_url = f'https://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@github.com/McKeSoR/LauncherReleases.git'
 
 class MyHandler(FileSystemEventHandler):
     def on_modified(self, event):
